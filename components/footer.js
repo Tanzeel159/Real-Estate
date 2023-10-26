@@ -1,13 +1,7 @@
-import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
+import { useMemo } from "react";
 
-type FooterType = {
-  /** Style props */
-  propOverflow?: CSSProperties["overflow"];
-};
-
-const Footer: NextPage<FooterType> = ({ propOverflow }) => {
-  const footerSectionStyle: CSSProperties = useMemo(() => {
+const Footer = ({ propOverflow }) => {
+  const footerSectionStyle = useMemo(() => {
     return {
       overflow: propOverflow,
     };

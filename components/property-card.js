@@ -1,18 +1,6 @@
-import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
+import { useMemo } from "react";
 
-type PropertyCardType = {
-  imageDimensions?: string;
-  imageDimensionsText?: string;
-
-  /** Style props */
-  propWidth?: CSSProperties["width"];
-  propFlex?: CSSProperties["flex"];
-  propMinWidth?: CSSProperties["minWidth"];
-  propMaxWidth?: CSSProperties["maxWidth"];
-};
-
-const PropertyCard: NextPage<PropertyCardType> = ({
+const PropertyCard = ({
   imageDimensions,
   imageDimensionsText,
   propWidth,
@@ -20,7 +8,7 @@ const PropertyCard: NextPage<PropertyCardType> = ({
   propMinWidth,
   propMaxWidth,
 }) => {
-  const card1Style: CSSProperties = useMemo(() => {
+  const card1Style = useMemo(() => {
     return {
       width: propWidth,
       flex: propFlex,

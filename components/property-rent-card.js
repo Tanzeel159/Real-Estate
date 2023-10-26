@@ -1,15 +1,7 @@
-import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
+import { useMemo } from "react";
 
-type PropertyRentCardType = {
-  /** Style props */
-  propBackgroundImage?: CSSProperties["backgroundImage"];
-};
-
-const PropertyRentCard: NextPage<PropertyRentCardType> = ({
-  propBackgroundImage,
-}) => {
-  const card11Style: CSSProperties = useMemo(() => {
+const PropertyRentCard = ({ propBackgroundImage }) => {
+  const card11Style = useMemo(() => {
     return {
       backgroundImage: propBackgroundImage,
     };

@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import PropertyRentCard from "./property-rent-card";
 
-const RentPropertiesContainer: NextPage = () => {
+const RentPropertiesContainer = () => {
   return (
     <div className="self-stretch flex flex-col items-center justify-start py-[86px] px-0 gap-[39px] text-center text-21xl text-primary-800 font-body-regular-600">
       <div className="self-stretch flex flex-col items-center justify-start gap-[40px] max-w-[95%px]">

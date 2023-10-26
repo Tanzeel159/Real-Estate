@@ -1,6 +1,4 @@
-import type { NextPage } from "next";
-
-const Contact: NextPage = () => {
+const Contact = () => {
   return (
     <div className="self-stretch bg-primary-50 flex flex-row flex-wrap items-start justify-center py-[86px] px-[5px] text-center text-21xl text-primary-800 font-body-regular-600">
       <div className="flex-1 flex flex-col items-center justify-start py-0 px-2.5 box-border gap-[40px] max-w-[900px]">

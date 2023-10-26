@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import "antd/dist/antd.min.css";
 import { Dropdown, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
@@ -6,7 +5,7 @@ import MainHeader from "../components/main-header";
 import PropertiesGridContainer from "../components/properties-grid-container";
 import Footer from "../components/footer";
 
-const PropertiesGridView: NextPage = () => {
+const PropertiesGridView = () => {
   return (
     <div className="relative bg-gray-white w-full flex flex-col items-start justify-start text-center text-33xl text-gray-white font-body-regular-400">
       <MainHeader />
@@ -32,13 +31,11 @@ const PropertiesGridView: NextPage = () => {
             <Dropdown
               overlay={
                 <Menu>
-                  {(
-                    [
-                      { value: "Popular properties" },
-                      { value: "Latest properties" },
-                      { value: "Recommended properties" },
-                    ] as any
-                  ).map((option: any, index: number) => (
+                  {[
+                    { value: "Popular properties" },
+                    { value: "Latest properties" },
+                    { value: "Recommended properties" },
+                  ].map((option, index) => (
                     <Menu.Item key={index}>
                       <a onClick={(e) => e.preventDefault()}>
                         {option.value || ""}

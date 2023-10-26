@@ -1,6 +1,4 @@
-import type { NextPage } from "next";
-
-const AreaContainer: NextPage = () => {
+const AreaContainer = () => {
   return (
     <div className="self-stretch flex-1 flex flex-col items-center justify-start py-[53px] px-[50px] gap-[45px] text-center text-21xl text-primary-800 font-body-regular-600">
       <div className="self-stretch flex flex-col items-center justify-start py-0 px-[30px] gap-[24px] md:self-stretch md:w-auto">

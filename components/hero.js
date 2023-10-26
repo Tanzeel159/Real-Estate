@@ -1,11 +1,10 @@
-import type { NextPage } from "next";
 import { useCallback } from "react";
 import "antd/dist/antd.min.css";
 import { Dropdown, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 
-const Hero: NextPage = () => {
+const Hero = () => {
   const router = useRouter();
 
   const onSearchCTAClick = useCallback(() => {
@@ -47,14 +46,12 @@ const Hero: NextPage = () => {
                 <Dropdown
                   overlay={
                     <Menu>
-                      {(
-                        [
-                          { value: "New York" },
-                          { value: "Los Angeles" },
-                          { value: "Chicago" },
-                          { value: "Berlin" },
-                        ] as any
-                      ).map((option: any, index: number) => (
+                      {[
+                        { value: "New York" },
+                        { value: "Los Angeles" },
+                        { value: "Chicago" },
+                        { value: "Berlin" },
+                      ].map((option, index) => (
                         <Menu.Item key={index}>
                           <a onClick={(e) => e.preventDefault()}>
                             {option.value || ""}
@@ -79,15 +76,13 @@ const Hero: NextPage = () => {
                   className="self-stretch"
                   overlay={
                     <Menu>
-                      {(
-                        [
-                          { value: "Studio apartments" },
-                          { value: "One-bedroom apartments" },
-                          { value: "Two-bedroom apartments" },
-                          { value: "Three-bedroom apartments" },
-                          { value: "Four or more bedroom apartments/houses" },
-                        ] as any
-                      ).map((option: any, index: number) => (
+                      {[
+                        { value: "Studio apartments" },
+                        { value: "One-bedroom apartments" },
+                        { value: "Two-bedroom apartments" },
+                        { value: "Three-bedroom apartments" },
+                        { value: "Four or more bedroom apartments/houses" },
+                      ].map((option, index) => (
                         <Menu.Item key={index}>
                           <a onClick={(e) => e.preventDefault()}>
                             {option.value || ""}
@@ -112,13 +107,11 @@ const Hero: NextPage = () => {
                   className="self-stretch"
                   overlay={
                     <Menu>
-                      {(
-                        [
-                          { value: "$500-$2000" },
-                          { value: "$2500-$10000" },
-                          { value: "$10000+" },
-                        ] as any
-                      ).map((option: any, index: number) => (
+                      {[
+                        { value: "$500-$2000" },
+                        { value: "$2500-$10000" },
+                        { value: "$10000+" },
+                      ].map((option, index) => (
                         <Menu.Item key={index}>
                           <a onClick={(e) => e.preventDefault()}>
                             {option.value || ""}

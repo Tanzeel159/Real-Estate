@@ -1,20 +1,7 @@
-import type { NextPage } from "next";
-import { useMemo, type CSSProperties } from "react";
+import { useMemo } from "react";
 
-type InfoCardType = {
-  imageId?: string;
-  actionText?: string;
-
-  /** Style props */
-  propWidth?: CSSProperties["width"];
-};
-
-const InfoCard: NextPage<InfoCardType> = ({
-  imageId,
-  actionText,
-  propWidth,
-}) => {
-  const sellYourHomeStyle: CSSProperties = useMemo(() => {
+const InfoCard = ({ imageId, actionText, propWidth }) => {
+  const sellYourHomeStyle = useMemo(() => {
     return {
       width: propWidth,
     };
